@@ -141,7 +141,7 @@ namespace Org.OpenAPITools.Model
             if (this.UploadDate != null) {
                 // UploadDate (DateOnly) pattern
                 Regex regexUploadDate = new Regex(@"YYYY-MM-DDTHH:MM:SSZ", RegexOptions.CultureInvariant);
-                if (!regexUploadDate.Match(this.UploadDate).Success)
+                if (!regexUploadDate.Match(this.UploadDate.ToString()).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for UploadDate, must match a pattern of " + regexUploadDate, new [] { "UploadDate" });
                 }
@@ -150,7 +150,7 @@ namespace Org.OpenAPITools.Model
             if (this.ActivationDate != null) {
                 // ActivationDate (DateOnly) pattern
                 Regex regexActivationDate = new Regex(@"YYYY-MM-DDTHH:MM:SSZ", RegexOptions.CultureInvariant);
-                if (!regexActivationDate.Match(this.ActivationDate).Success)
+                if (!regexActivationDate.Match(this.ActivationDate.ToString()).Success)
                 {
                     yield return new System.ComponentModel.DataAnnotations.ValidationResult("Invalid value for ActivationDate, must match a pattern of " + regexActivationDate, new [] { "ActivationDate" });
                 }
